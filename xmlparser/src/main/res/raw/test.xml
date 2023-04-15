@@ -1,0 +1,14 @@
+<config>
+    <sub_config1>
+        <config1_sub1>sub1_text1</config1_sub1>
+        <config1_sub2>sub1_text2</config1_sub2>
+        <config1_sub3>sub1_text3</config1_sub3>
+        <config1_sub4>sub1_text4</config1_sub4>
+    </sub_config1>
+    <sub_config2>
+        <config2_sub1 tag="2-1">sub2_text1</config2_sub1>
+        <config2_sub2 tag="2-2">sub2_text2</config2_sub2>
+        <config2_sub3 tag="2-3">sub2_text3</config2_sub3>
+        <config2_sub4 tag="2-4">sub2_text4</config2_sub4>
+    </sub_config2>
+</config>
