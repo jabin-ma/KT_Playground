@@ -9,8 +9,8 @@ import android.os.IBinder
 import android.provider.Settings
 import android.util.Log
 import android.view.Gravity
+import android.view.Window
 import android.view.WindowManager
-import com.example.floatingclock.PerfettoView
 
 
 private const val CHANNEL_DEFAULT_IMPORTANCE = "default";
@@ -18,11 +18,16 @@ private const val ONGOING_NOTIFICATION_ID = 101
 
 class MyService : Service() {
 
-
-    private lateinit var windowManager: WindowManager
+    private lateinit var floatingWindow:FloatingWindow;
 
     override fun onCreate() {
         createNotificationChannel()
+        floatingWindow = FloatingWindow(this)
+        val text = PerfettoView(this)
+        text.setTextColor(Color.MAGENTA)
+        text.textSize = 25f
+        text.updateTime()
+        floatingWindow.setContentView(text)
     }
 
     private fun createNotificationChannel() {
@@ -60,12 +65,12 @@ class MyService : Service() {
             .build()
 
         startForeground(ONGOING_NOTIFICATION_ID, notification)
-        initView()
+        floatingWindow.attachWindow()
         return START_NOT_STICKY
     }
 
 
-    fun initView(){
+   /* fun initView(){
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
         val layoutParams = WindowManager.LayoutParams()
         layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
@@ -84,7 +89,7 @@ class MyService : Service() {
             windowManager.addView(mTextClock, layoutParams)
             windowManager.updateViewLayout(mTextClock.rootView, layoutParams)
         }
-    }
+    }*/
 
 
 
@@ -99,7 +104,6 @@ class MyService : Service() {
     }
 
     companion object{
-
         const val TAG = "MyService"
     }
 }

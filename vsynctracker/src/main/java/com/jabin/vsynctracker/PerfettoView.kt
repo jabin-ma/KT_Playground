@@ -1,4 +1,4 @@
-package com.example.floatingclock
+package com.jabin.vsynctracker
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,7 +9,7 @@ import android.os.Trace
 import android.util.AttributeSet
 import android.widget.TextView
 
-class PerfettoView: androidx.appcompat.widget.AppCompatTextView {
+class PerfettoView: TextView {
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
