@@ -1,0 +1,29 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="30dp"
+            android:height="120dp"
+            android:viewportWidth="30"
+            android:viewportHeight="120">
+            <path
+                android:name="edge"
+                android:fillColor="#FF0000"
+                android:pathData="M0,0 c0,20 0,40 0,60 c0,20 0,40 0,60" />
+        </vector>
+    </aapt:attr>
+
+    <target android:name="edge">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom="M0,0 c0,20 0,40 0,60 c0,20 0,40 0,60"
+                android:valueTo="M0,0 c0,20 30,40 30,60 c0,20 -30,40 -30,60"
+                android:duration="3000"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+</animated-vector>
+    

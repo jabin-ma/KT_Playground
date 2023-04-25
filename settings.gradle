@@ -16,3 +16,4 @@ rootProject.name = "KT_Playground"
 include ':app'
 include ':xmlparser'
 include ':vsynctracker'
+include ':svg'

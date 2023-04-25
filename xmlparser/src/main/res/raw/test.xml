@@ -11,4 +11,15 @@
         <config2_sub3 tag="2-3">sub2_text3</config2_sub3>
         <config2_sub4 tag="2-4">sub2_text4</config2_sub4>
     </sub_config2>
+
+
+    <Rule name="xxx" type="activity"  a="b" b="c">
+          <checker >
+              <eq key="activity_name" />
+          </checker>
+
+          <action>
+              <ref name="xxx" />
+          </action>
+    </Rule>
 </config>

@@ -65,9 +65,7 @@ public class FloatingWindow {
        public static WindowManager.LayoutParams getFloatingWindowParams() {
               WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                       WRAP_CONTENT, WRAP_CONTENT, /* xpos */ 0, /* ypos */ 0, TYPE_APPLICATION_OVERLAY,
-                              FLAG_NOT_FOCUSABLE
-                              | FLAG_NOT_TOUCHABLE
-                              | FLAG_ALT_FOCUSABLE_IM,
+                              FLAG_NOT_FOCUSABLE | FLAG_NOT_TOUCHABLE | FLAG_ALT_FOCUSABLE_IM,
                       PixelFormat.TRANSLUCENT);
               params.gravity= Gravity.START|Gravity.TOP;
               if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
