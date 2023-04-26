@@ -1,13 +1,18 @@
 package com.example.svg
 
-import android.graphics.drawable.AnimatedVectorDrawable
-import androidx.appcompat.app.AppCompatActivity
+import android.animation.ValueAnimator
 import android.os.Bundle
-import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.PathParser.PathDataNode
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(CView(this))
+    }
+
+    fun setPathData(obj:PathDataNode){
+        Log.d("MJP","$obj")
     }
 }
