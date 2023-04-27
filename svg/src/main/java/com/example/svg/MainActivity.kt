@@ -9,7 +9,7 @@ import androidx.core.graphics.PathParser.PathDataNode
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(CView(this))
+        setContentView(CView2(this))
     }
 
     fun setPathData(obj:PathDataNode){
