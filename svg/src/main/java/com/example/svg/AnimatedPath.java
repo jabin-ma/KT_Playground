@@ -33,12 +33,12 @@ public class AnimatedPath {
         updateMatrix();
     }
 
-    boolean adaptiveWidth = true;
+    boolean adaptiveWidth = false;
     private void updateMatrix() {
         mPostMatrix.reset();
         float width = adaptiveWidth?displayHeight * (viewportWidth/viewportHeight):displayWidth;
         mPostMatrix.postScale(width / viewportWidth, displayHeight / viewportHeight);
-        mPostMatrix.postRotate(10, displayWidth * 0.5f, displayHeight * 0.5f);
+        mPostMatrix.postRotate(0, displayWidth * 0.5f, displayHeight * 0.5f);
     }
 
     public Path animatedPath(float fraction) {
